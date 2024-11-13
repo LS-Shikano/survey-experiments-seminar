@@ -1,5 +1,5 @@
 
-{%block style %}
+{{block style }}
 <!--this block is used to do the styling-->
 
 <!--set display none, that the title you use just appears in tab but not on page, so the page title and the tab-title
@@ -21,14 +21,14 @@ border-style, border width etc. can be changed here-->
 
 </style>
 
-{% endblock %}
+{{ endblock }}
 
-{% block title %}
+{{ block title }}
 <!--this is the title that will appear in the tab-->
     Title that will appear in the tab
-{% endblock %}
+{{ endblock }}
 
-{% block content %}
+{{ block content }}
 <!-- <br> will start a new line, also possible to set more <br>'s below each other-->
 <br>
 <!--this is the title that will appear on top of your page-->
@@ -212,11 +212,11 @@ the "images"-folder, which is the subfolder of the static folder. As a little re
 structure of an otree project.</p>
 
 <!--code for adding the image, make sure the image is stored at the right place-->
-<img   width="50%" height="50%" src="{% static 'images/folder_structure.png' %}" />
+<img   width="50%" height="50%" src="{{ static 'images/folder_structure.png' }}" />
 <br>
 
 <p>A possibility to include an image is to use the following code snippet:</p>
-<p>&ltimg width="50%" height="50%" src=" 	&#123 % static 'images/pictureName' % 	&#125" /&gt</p>
+<p>&ltimg width="50%" height="50%" src=" 	&#123 &#123  static 'images/pictureName' &#125 &#125" /&gt</p>
 <p>Of course you can vary the sizes of width and height to increase or decrease the picture size.</p>
 <p>See <a href=" https://otree.readthedocs.io/en/latest/templates.html#images-static-files">Images in otree </a>
     for further information</p>
@@ -228,8 +228,8 @@ structure of an otree project.</p>
 
 <div class="mb-1 border pt-2 pb-2 ps-2 px-2">
     <p>A block has the following structure:</p>
-    <b>to open a block:</b> &#123 % block WhatIsBlockUsedFor % &#125<br>
-    <p> <b>to close the  block </b> &#123 % endblock  % &#125</p>
+    <b>to open a block:</b> &#123 &#123  block WhatIsBlockUsedFor &#125 &#125<br>
+    <p> <b>to close the  block </b> &#123 &#123 endblock  &#125 &#125</p>
 
     <p>If you are using a style block (see the first block in this html file), you need to include the style tag in which you embed
     your code.</p>
@@ -242,4 +242,4 @@ structure of an otree project.</p>
  <button class="otree-btn-next btn btn-primary next-button otree-next-button">
     Weiter
 </button>
-{% endblock %}
+{{ endblock }}
